@@ -2,10 +2,10 @@
   <div >
     <b-container fluid>
 
-      <router-link to="/detail">Detail</router-link>
+      <router-link to="/detalle">Detail</router-link>
 
     <div  v-for="e in elements" v-bind:key="e.id">
-        <router-link  :to=" '/detail/' + e.id ">
+        <router-link  :to=" '/detalle/' + e.id ">
           <b-card
             :title="e.titulo"
           >

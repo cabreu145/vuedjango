@@ -21,7 +21,7 @@ Vue.config.productionTip = false
 
 const routes =[
   {path:'/', component:List},
-  {path:'/detail/:id', component:Detail}
+  {path:'/detalle/:id', component:Detail}
 ]
 
 const router = new VueRouter ({
