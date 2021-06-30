@@ -1,10 +1,10 @@
 <template>
   <div>
     <b-list-group>
-      <div v-for="c in categories" v-bind:key="c.id">
+      <div v-for="t in types" v-bind:key="t.id">
         <b-list-group-item button>
-            <router-link :to="'/categoria/' + c.id + '/pieza'">
-                {{c.titulo}}
+            <router-link :to="'/tipo_material/' + t.id + '/pieza'">
+                {{t.titulo}}
             </router-link>
         </b-list-group-item>
       </div>
@@ -21,15 +21,15 @@ export default {
 
   data() {
     return {
-      categories: [],
+      types: [],
     };
   },
   methods: {
     findAll: function () {
-        fetch('http://127.0.0.1:8000/api/categoria/?format=json')
+        fetch('http://127.0.0.1:8000/api/tipo_material/?format=json')
         .then(res => res.json())
         //.then(res => console.log(res[0].id))
-        .then(res => (this.categories = res));
+        .then(res => (this.types = res));
     }
   }
 };
