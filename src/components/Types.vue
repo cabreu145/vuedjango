@@ -3,7 +3,7 @@
     <b-list-group>
       <div v-for="t in types" v-bind:key="t.id">
         <b-list-group-item button>
-            <router-link :to="'/tipo_material/' + t.id + '/pieza'">
+            <router-link :to="'/tipo_material/' + t.id + '/piezas'">
                 {{t.titulo}}
             </router-link>
         </b-list-group-item>

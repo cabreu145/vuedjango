@@ -16,7 +16,7 @@
           <b-dropdown-item
             v-for="t in types"
             v-bind:key="t.id"
-            :to="'/tipo_material/' + t.id + '/pieza'"
+            :to="'/tipo_material/' + t.id + '/piezas'"
           >
             {{ t.titulo }}</b-dropdown-item
           >
@@ -27,7 +27,7 @@
           <b-dropdown-item
             v-for="c in categories"
             v-bind:key="c.id"
-            :to="'/categoria/' + c.id + '/pieza'"
+            :to="'/categoria/' + c.id + '/piezas'"
           >
             {{ c.titulo }}</b-dropdown-item
           >
