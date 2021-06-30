@@ -2,7 +2,7 @@
   <div >
     <b-container fluid>
 
-      <router-link to="/detalle">Detail</router-link>
+      
 
     <div  v-for="e in elements" v-bind:key="e.id">
         <router-link  :to=" '/detalle/' + e.id ">

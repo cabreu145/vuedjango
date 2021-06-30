@@ -1,34 +1,21 @@
 <template>
-  <div >
+  <div>
     <b-container fluid>
-      Listado de Categorias
-      
-
-    <div  v-for="e in elements" v-bind:key="e.id">
-        <router-link  :to=" '/detalle/' + e.id ">
-          <b-card
-            :title="e.titulo"
-          >
-
-          <b-card-text>
-              {{ e.descripcion }}
-          </b-card-text>
-
-
-          </b-card>
-        </router-link>
-    </div>
+      <ListDefault :elementsList="elements" />
     </b-container>
-
   </div>
 </template>
 
 <script>
-export default {
+import ListDefault from "../partials/_ListDefault";
 
-    created(){
-        this.findAll()
-    },
+export default {
+  components: {
+    ListDefault,
+  },
+  created() {
+    this.findAll();
+  },
 
   data() {
     return {
@@ -37,13 +24,17 @@ export default {
   },
   methods: {
     findAll: function () {
-        fetch('http://127.0.0.1:8000/api/categoria/'+this.$route.params.id+'/piezas/?format=json')
-        .then(res => res.json())
+      fetch(
+        "http://127.0.0.1:8000/api/categoria/" +
+          this.$route.params.id +
+          "/piezas/?format=json"
+      )
+        .then((res) => res.json())
         //.then(res => console.log(res[0].id))
-        .then(res => this.elements = res)
+        .then((res) => (this.elements = res));
     },
   },
-}
+};
 </script>
 
 <style>
