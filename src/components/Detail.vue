@@ -1,6 +1,6 @@
 <template>
   <div >
-    <b-container>
+
     
         <b-card
           :title="element.titulo"
@@ -13,8 +13,7 @@
 
         </b-card>
    
-    </b-container>
-
+    
   </div>
 </template>
 

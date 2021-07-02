@@ -1,8 +1,8 @@
 <template>
   <div>
-    <b-container fluid>
+    
       <ListDefault :elements-list="elements" />
-    </b-container>
+    
   </div>
 </template>
 
