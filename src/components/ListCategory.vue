@@ -36,7 +36,7 @@ export default {
   },
   watch: {
     "$route.params.id": function () {
-      console.log("Listado de categorias");
+      console.log("Listado de Categorías");
       this.findAll();
     },
   },

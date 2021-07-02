@@ -23,7 +23,7 @@
 
         </b-nav-item-dropdown>
 
-        <b-nav-item-dropdown text="Categorias" right>
+        <b-nav-item-dropdown text="Categorías" right>
           <b-dropdown-item
             v-for="c in categories"
             v-bind:key="c.id"

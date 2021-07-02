@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h5>Categorias</h5>
+    <h5>Categorías</h5>
     <b-list-group>
       <b-list-group-item button v-for="c in categories" v-bind:key="c.id">
         <router-link :to="'/categoria/' + c.id + '/piezas'">
