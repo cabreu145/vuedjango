@@ -1,30 +1,18 @@
 <template>
   <div >
     <b-container fluid>
-
-      
-
-    <div  v-for="e in elements" v-bind:key="e.id">
-        <router-link  :to=" '/detalle/' + e.id ">
-          <b-card
-            :title="e.titulo"
-          >
-
-          <b-card-text>
-              {{ e.descripcion }}
-          </b-card-text>
-
-
-          </b-card>
-        </router-link>
-    </div>
+      <ListDefault :elements-list="elements" />
     </b-container>
 
   </div>
 </template>
 
 <script>
+import ListDefault from "../partials/_ListDefault";
 export default {
+  components: {
+    ListDefault,
+  },
 
     created(){
         this.findAll()

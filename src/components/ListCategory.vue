@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-container fluid>
-      <ListDefault :elementsList="elements" />
+      <ListDefault :elements-list="elements" />
     </b-container>
   </div>
 </template>
