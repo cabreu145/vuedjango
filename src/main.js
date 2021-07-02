@@ -7,6 +7,8 @@ import VueRouter from 'vue-router'
 import List from './components/List'
 import Detail from './components/Detail'
 import ListCategory from './components/ListCategory'
+import ListType from './components/ListType'
+
 
 
 import { BootstrapVue, IconsPlugin} from 'bootstrap-vue'
@@ -23,7 +25,8 @@ Vue.config.productionTip = false
 const routes =[
   {path:'/', component:List},
   {path:'/detalle/:id', component:Detail},
-  {path:'/categoria/:id/piezas', component: ListCategory}
+  {path:'/categoria/:id/piezas', component: ListCategory},
+  {path:'/tipo_material/:id/piezas', component: ListType}
 ]
 
 const router = new VueRouter ({
